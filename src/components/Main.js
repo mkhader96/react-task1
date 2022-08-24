@@ -1,15 +1,24 @@
 import React from "react";
 import HornedBeast from "./HornedBeast";
-// import data from "./data";
 import {Row} from "react-bootstrap";
+import HornCount from "./Horns";
 
 
 
 class Main extends React.Component {
     render(){
-        return(
+        return(<>
+           <HornCount
+          showBeasts={this.props.showBeasts} 
+        /> <><br></br>
+        <br></br>
+        <br></br>
+        <br></br></>
+        
+          <div>
           <Row xs={2} md={4} className="g-4">
             {this.props.beasts.map((beast, index) => {
+              
             return (
               <div key={index}>
                 <HornedBeast
@@ -22,7 +31,8 @@ class Main extends React.Component {
               </div>
             )
           })}
-          </Row>
+          </Row></div>
+          </>
         )
     }
 }

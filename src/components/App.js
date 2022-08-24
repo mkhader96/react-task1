@@ -21,14 +21,20 @@ class App extends React.Component {
   }
   hideModal = () => {this.setState({displayModal: false});
   }
-
+  showBeasts = (beastData) => {this.setState({beastData});
+  }
   
   render() {
     return (
       <div>
-        <Header />
+        <Header /><><br></br>
+        <br></br>
+        <br></br>
+        <br></br></>
         <div>
+          
           <Main
+          showBeasts={this.showBeasts}
             showModal={this.showModal}
             beasts={this.state.beastData}
           />
@@ -38,6 +44,10 @@ class App extends React.Component {
           selectedBeast={this.state.selectedBeast} />
           
         </div>
+        <><br></br>
+        <br></br>
+        <br></br>
+        <br></br></>
         <Footer />
       </div>
     );
